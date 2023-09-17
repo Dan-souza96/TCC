@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent implements OnInit {
+  mostrarMensagem: boolean = false; // Variável para controlar a exibição da mensagem
 
   constructor(private router: Router) {}
 
@@ -27,8 +28,8 @@ export class CadastroComponent implements OnInit {
       // Após o cadastro, você pode redirecionar para a página desejada, por exemplo, a página de login
       this.router.navigate(['/Login']);
     } else {
-      // Campos inválidos, não prosseguir com o cadastro
-      console.error('Campos inválidos. Por favor, verifique seus dados.');
+      // Campos inválidos, exibe a mensagem de aviso
+      this.mostrarMensagem = true;
     }
   }
 
@@ -51,7 +52,7 @@ export class CadastroComponent implements OnInit {
     return true;
   }
 
-cancelarCadastro() {
+  cancelarCadastro() {
     // Redireciona o usuário para a página de login (ajuste o caminho conforme necessário)
     this.router.navigate(['/Login']);
   }

@@ -11,16 +11,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ComponentsModule } from './components/components.module';
-import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.component';
+import { LOCALE_ID } from '@angular/core';
 
 
-
-@NgModule({
+@NgModule({ 
   declarations: [
-    AppComponent,
-    RedefinirSenhaComponent,
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +33,7 @@ import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.compo
     ComponentsModule
     // Certifique-se de importar o ComponentsModule aqui
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

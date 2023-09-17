@@ -1,0 +1,78 @@
+.agenda-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .week-view {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+  
+      .times {
+        flex: 0 0 70px;
+        padding: 10px;
+        border-right: 1px solid #e0e0e0;
+        text-align: center;
+  
+        .time-header {
+          font-weight: bold;
+        }
+  
+        .time {
+          padding: 5px 0;
+        }
+      }
+  
+      .appointments {
+        flex-grow: 1;
+        overflow: auto;
+        max-height: 400px;
+  
+        .day-header {
+          font-weight: bold;
+          padding: 10px;
+        }
+        /* Estilos personalizados para os dias da semana */
+/* Estilos personalizados para os dias da semana */
+.day-header {
+    text-align: center; /* Centralizar o conteúdo */
+  }
+  
+  /* Estilos para o número do dia */
+  .day-number {
+    font-size: 20px; /* Tamanho maior para os números */
+  }
+  
+  /* Estilos para o nome do dia */
+  .day-name {
+    font-size: 16px; /* Tamanho do nome do dia */
+    margin-top: 8px; /* Espaço entre o número e o nome */
+  }
+  
+  
+  
+        .appointment {
+          border: 1px solid #e0e0e0;
+          min-width: 100px;
+          height: 50px;
+          text-align: center;
+          padding: 10px;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+  }
+  
