@@ -17,6 +17,7 @@ import { ComponentsRoutingModule } from './components-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.component';
 import { AgendaComponent } from './agenda/agenda.component';
+import { PaginaInicialUsuarioComponent } from './pagina-inicial-usuario/pagina-inicial-usuario.component';
 
 registerLocaleData(localePt);
 
@@ -25,7 +26,8 @@ registerLocaleData(localePt);
     LoginComponent,
     CadastroComponent,
     RedefinirSenhaComponent,
-    AgendaComponent
+    AgendaComponent,
+    PaginaInicialUsuarioComponent
   ],
   imports: [
     CommonModule,

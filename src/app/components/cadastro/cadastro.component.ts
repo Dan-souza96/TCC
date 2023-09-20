@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CadastroComponent implements OnInit {
   mostrarMensagem: boolean = false; // Variável para controlar a exibição da mensagem
+  tipoCadastro: string = 'cliente'; // Valor padrão é 'cliente'
 
   constructor(private router: Router) {}
 
@@ -23,10 +24,14 @@ export class CadastroComponent implements OnInit {
       // Se os campos estiverem válidos, você pode prosseguir com o cadastro
 
       // Aqui, você pode enviar os dados para o servidor ou realizar qualquer outra ação necessária
-      console.log('Realizar Cadastro: Nome:', this.nome, 'E-mail:', this.email, 'CPF/CNPJ:', this.cpfCnpj, 'Senha:', this.senha);
+      console.log('Realizar Cadastro: Nome:', this.nome, 'E-mail:', this.email, 'Senha:', this.senha);
 
-      // Após o cadastro, você pode redirecionar para a página desejada, por exemplo, a página de login
-      this.router.navigate(['/Login']);
+      // Redireciona para a página apropriada com base no tipo de cadastro
+      if (this.tipoCadastro === 'cliente') {
+        this.router.navigate(['/PáginaCliente']); // Substitua 'PáginaCliente' pelo caminho correto
+      } else if (this.tipoCadastro === 'barbeiro') {
+        this.router.navigate(['/PáginaBarbeiro']); // Substitua 'PáginaBarbeiro' pelo caminho correto
+      }
     } else {
       // Campos inválidos, exibe a mensagem de aviso
       this.mostrarMensagem = true;

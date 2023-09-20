@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
     if (autenticacaoBemSucedida) {
       // Se a autenticação for bem-sucedida, redirecione para a página protegida.
-      this.router.navigate(['/Agenda']);
+      this.router.navigate(['/PgUsuario']);
     } else {
       // Caso contrário, redirecione para a página de cadastro.
       this.router.navigate(['/Cadastro']);
