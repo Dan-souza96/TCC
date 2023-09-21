@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agenda',
@@ -27,8 +28,14 @@ export class AgendaComponent {
   appointments: { [key: string]: string } = {}; // Agora armazenamos nomes de agendamento diretamente por chave
   appointmentName: string | null = null;
 
-  constructor() {
+  constructor(private router: Router) {
     this.generateWeekDays();
+  }
+
+  voltarPagina() {
+    // Implemente o comportamento desejado para o botão "Voltar".
+    // Por exemplo, navegar de volta para a página anterior:
+    this.router.navigate(['/PgUsuario']); // Substitua '/pagina-anterior' pelo caminho da sua página anterior.
   }
 
   // Função para formatar a data em português
@@ -119,7 +126,7 @@ export class AgendaComponent {
   private generateTimes(): string[] {
     // Função para gerar os horários das 8:00 às 22:00 em intervalos de 30 minutos
     const times = [];
-    for (let hour = 8; hour <= 22; hour++) {
+    for (let hour = 8; hour <= 19; hour++) {
       for (let minute = 0; minute < 60; minute += 30) {
         const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
         times.push(time);

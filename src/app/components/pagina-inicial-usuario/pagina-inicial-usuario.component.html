@@ -1,5 +1,5 @@
 <div>
-    <h2>Profissionais Registrados</h2>
+    <h2>Profissionais</h2>
     <table>
       <thead>
         <tr>
@@ -13,7 +13,7 @@
           <td>{{ profissional.nome }}</td>
           <td>{{ profissional.especialidade }}</td>
           <td>
-            <button mat-icon-button (click)="irParaAgenda(profissional.id)">
+            <button mat-icon-button routerLink="/Adenda">
               <mat-icon>event</mat-icon>
             </button>
           </td>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-inicial-usuario',
@@ -14,17 +15,18 @@ export class PaginaInicialUsuarioComponent implements OnInit {
     // Adicione mais profissionais conforme necessário
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   irParaAgenda(profissionalId: number) {
+    this.router.navigate(["/Agenda"]); // Corrigido para "/Agenda"
     // Implemente a navegação para a agenda do profissional com base no ID
     // Por exemplo, usando o roteamento do Angular
   }
 
   sair() {
-    // Implemente a ação de saída, como redirecionar para a página de login ou executar o logout
+    this.router.navigate(['/Login']);
   }
 }
