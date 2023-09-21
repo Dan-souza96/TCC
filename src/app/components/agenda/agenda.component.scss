@@ -25,8 +25,8 @@ h2 button {
   color: #0c0c0c;
   position: absolute; /* Posição absoluta para não afetar o texto */
   left: 15px; /* Distância do canto esquerdo da página */
-  top: 18%; /* Centralizar verticalmente em relação à altura do pai */
-  transform: translateY(-50%); /* Corrigir o alinhamento vertical */
+  top: auto; /* Centralizar verticalmente em relação à altura do pai */
+  transform: translateY(-8%); /* Corrigir o alinhamento vertical */
 }
 
       

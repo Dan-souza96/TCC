@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./redefinir-senha.component.scss']
 })
 export class RedefinirSenhaComponent implements OnInit {
+  email: string = ''; // Adicione a propriedade 'email' aqui
   novaSenha: string = '';
   confirmarSenha: string = '';
   mostrarMensagem: boolean = false;
